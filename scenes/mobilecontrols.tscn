@@ -14,24 +14,26 @@ radius = 120.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_vgo0g"]
 radius = 120.0
 
-[node name="Mobilecontrols" type="Node2D"]
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="MobileControls" type="Node2D" parent="."]
 script = ExtResource("1_dyqfo")
 
-[node name="Up button" type="TouchScreenButton" parent="."]
+[node name="Up button" type="TouchScreenButton" parent="MobileControls"]
 position = Vector2(896, 0)
 texture_normal = ExtResource("2_xk2uo")
 shape = SubResource("CircleShape2D_76lec")
 passby_press = true
 action = "jump"
 
-[node name="Left" type="TouchScreenButton" parent="."]
+[node name="Left" type="TouchScreenButton" parent="MobileControls"]
 position = Vector2(-128, 0)
 texture_normal = ExtResource("3_qob8c")
 shape = SubResource("CircleShape2D_twy7v")
 passby_press = true
 action = "moveLeft"
 
-[node name="Right" type="TouchScreenButton" parent="."]
+[node name="Right" type="TouchScreenButton" parent="MobileControls"]
 position = Vector2(176, 0)
 texture_normal = ExtResource("4_nfkka")
 shape = SubResource("CircleShape2D_vgo0g")
