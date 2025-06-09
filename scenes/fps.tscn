@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3bkljths316u"]
+
+[ext_resource type="FontFile" uid="uid://i3aeeeogebwi" path="res://assets/fonts/PixelOperator8.ttf" id="1_1vuor"]
+[ext_resource type="Script" path="res://scripts/fps.gd" id="2_ke6wy"]
+
+[node name="FPS" type="Label"]
+z_index = 10
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -367.0
+offset_top = 71.0
+offset_right = -59.0
+offset_bottom = 112.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.664177, 0.808218, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("1_1vuor")
+theme_override_font_sizes/font_size = 32
+text = "FPS"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+script = ExtResource("2_ke6wy")

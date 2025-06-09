@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://3nsic80tnj21"]
+
+[ext_resource type="Script" path="res://scenes/mobilecontrols.gd" id="1_dyqfo"]
+[ext_resource type="Texture2D" uid="uid://boys3iabvksxe" path="res://assets/Top arrow round button.webp" id="2_xk2uo"]
+[ext_resource type="Texture2D" uid="uid://bj13ash2o8dxm" path="res://assets/Left arrow round button.webp" id="3_qob8c"]
+[ext_resource type="Texture2D" uid="uid://51bnk5c7asdc" path="res://assets/Right arrow round button.webp" id="4_nfkka"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_76lec"]
+radius = 150.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_twy7v"]
+radius = 120.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vgo0g"]
+radius = 120.0
+
+[node name="Mobilecontrols" type="Node2D"]
+script = ExtResource("1_dyqfo")
+
+[node name="Up button" type="TouchScreenButton" parent="."]
+position = Vector2(896, 0)
+texture_normal = ExtResource("2_xk2uo")
+shape = SubResource("CircleShape2D_76lec")
+passby_press = true
+action = "jump"
+
+[node name="Left" type="TouchScreenButton" parent="."]
+position = Vector2(-128, 0)
+texture_normal = ExtResource("3_qob8c")
+shape = SubResource("CircleShape2D_twy7v")
+passby_press = true
+action = "moveLeft"
+
+[node name="Right" type="TouchScreenButton" parent="."]
+position = Vector2(176, 0)
+texture_normal = ExtResource("4_nfkka")
+shape = SubResource("CircleShape2D_vgo0g")
+passby_press = true
+action = "moveRight"

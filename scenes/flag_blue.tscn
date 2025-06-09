@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6kf6ej4pm36"]
+
+[ext_resource type="Script" path="res://scenes/flag_blue.gd" id="1_cf4ow"]
+[ext_resource type="Texture2D" uid="uid://bw5150fiwduar" path="res://assets/Flag Blue.webp" id="2_4x6pt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l85rc"]
+size = Vector2(49.6773, 30.8661)
+
+[node name="NxtLvl" type="Area2D"]
+scale = Vector2(0.221429, 0.453572)
+collision_mask = 2
+script = ExtResource("1_cf4ow")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.282241, -38.0314)
+scale = Vector2(0.766128, 1.05512)
+texture = ExtResource("2_4x6pt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.25806, -15.4331)
+shape = SubResource("RectangleShape2D_l85rc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

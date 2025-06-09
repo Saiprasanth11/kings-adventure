@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd3sdlac2fved"]
+
+[ext_resource type="Script" path="res://scripts/intro.gd" id="1_dqwuw"]
+[ext_resource type="Texture2D" uid="uid://c8s547fqvqe4j" path="res://assets/sky.webp" id="2_lxqkw"]
+[ext_resource type="FontFile" uid="uid://c4wtw1ggk4gnr" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_1tndy"]
+[ext_resource type="Texture2D" uid="uid://b2yxc1koeh35y" path="res://assets/Blue Button_Pressed.webp" id="4_6eksw"]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_dqwuw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 324.75)
+scale = Vector2(0.6, 0.603241)
+texture = ExtResource("2_lxqkw")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 81.0
+offset_right = 1144.0
+offset_bottom = 233.0
+theme_override_colors/font_color = Color(0.478369, 0.805795, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.038583, 0.036231, 0.0518043, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_1tndy")
+theme_override_font_sizes/font_size = 64
+text = "King's Adventure"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(327, 297)
+scale = Vector2(1.85547, 1.59434)
+texture_normal = ExtResource("4_6eksw")
+
+[node name="play" type="Label" parent="TouchScreenButton"]
+offset_left = 10.0
+offset_top = 17.0
+offset_right = 245.0
+offset_bottom = 97.0
+theme_override_fonts/font = ExtResource("3_1tndy")
+theme_override_font_sizes/font_size = 32
+text = "Play "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 323)
+
+[connection signal="released" from="TouchScreenButton" to="." method="_on_touch_screen_button_released"]
